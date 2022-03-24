@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
     <!-- Axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js)"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Email List</title>
 </head>
@@ -29,9 +29,9 @@
 <body>
     <main id="app">
         <div class="p-5">
-            <button class="btn btn-primary p-2 mb-3">Press to Generate</button>
+            <button @click="genBtn" class="btn btn-primary p-2 mb-3">Press to Generate</button>
             <ul>
-                <li></li>
+                <li v-for="(element, index) in emails"> {{ element }}</li>
             </ul>
         </div>
         
