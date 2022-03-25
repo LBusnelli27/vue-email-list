@@ -30,7 +30,7 @@
     <main id="app">
         <div class="p-5">
             <button @click="genBtn" class="btn btn-primary p-2 mb-3">Press to Generate</button>
-            <ul>
+            <ul v-if="emails.length == 10">
                 <li v-for="(element, index) in emails"> {{ element }}</li>
             </ul>
         </div>
